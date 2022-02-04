@@ -31,6 +31,7 @@ This is a minimal example showing how to build a basic org chart:
 
 ``` r
 library(orgcharter)
+library(webshot)
 
 ## First you'll need some organisation data
 ## Often, that will be from a spreadsheet, but to demonstrate, we will do it in code
@@ -62,7 +63,11 @@ data <- tibble::tribble(
 
 # Next, prepare the data
 prepared_data <- prepare_org_data(data)
+```
 
+``` r
 # Finally, make the org chart
 make_org_chart(prepared_data)
 ```
+
+<img src="man/figures/README-org-chart-1.png" width="100%" />
